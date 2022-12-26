@@ -3066,12 +3066,14 @@ overlay_cuda_filter_deps_any="cuda_nvcc cuda_llvm"
 tensorrt_filter_deps="libnpp libtensorrt"
 nv122rgbp_filter_deps="libnpp"
 pose_filter_deps="cuda_nvcc opengl"
-pose_filter_extralibs="-Wl,--no-as-needed -ltorch -ltorch_cuda -ltorch_cpu -lc10 -lc10_cuda -ltorchvision
--lnvrtc -lnvToolsExt -lcudart -lcuda -lonnxruntime -lstdc++ -lEGL -lGL -lX11 -lpthread -lXrandr -lXi -lassimp"
+#pose_filter_extralibs="-Wl,--no-as-needed -ltorch -ltorch_cuda -ltorch_cpu -lc10 -lc10_cuda -ltorchvision
+# -lnvrtc -lnvToolsExt -lcudart -lcuda -lonnxruntime -lstdc++ -lEGL -lGL -lX11 -lpthread -lXrandr -lXi -lassimp"
+pose_filter_extralibs=""
 format_cuda_filter_extralibs="-lcudart -lcuda -lstdc++"
 tddfa_filter_deps="cuda_nvcc libtensorrt"
-tddfa_filter_extralibs="-ltorchvision"
-# tensorrt_filter_deps_any="cuda_nvcc cuda_llvm"
+# tddfa_filter_extralibs="-ltorchvision"
+tddfa_filter_extralibs=""
+tensorrt_filter_deps_any="cuda_nvcc cuda_llvm"
 
 amf_deps_any="libdl LoadLibrary"
 nvenc_deps="ffnvcodec"
