@@ -439,7 +439,6 @@ OBJS-$(CONFIG_SUPER2XSAI_FILTER)             += vf_super2xsai.o
 OBJS-$(CONFIG_SWAPRECT_FILTER)               += vf_swaprect.o
 OBJS-$(CONFIG_SWAPUV_FILTER)                 += vf_swapuv.o
 OBJS-$(CONFIG_TBLEND_FILTER)                 += vf_blend.o framesync.o
-#OBJS-$(CONFIG_TDDFA_FILTER)                  += vf_tddfa.o 3ddfa/3ddfa_kernels.o cnpy/cnpy.o format_cuda_kernel.o
 OBJS-$(CONFIG_TELECINE_FILTER)               += vf_telecine.o
 OBJS-$(CONFIG_TENSORRT_FILTER)               += vf_tensorrt.o tensorrt.o
 OBJS-$(CONFIG_THISTOGRAM_FILTER)             += vf_histogram.o
