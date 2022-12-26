@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/pytorch:22.10-py3
+FROM nvcr.io/nvidia/pytorch:22.12-py3
 # FROM busybox:latest
 ARG PREFIX=/usr/local
 
@@ -43,4 +43,5 @@ RUN git clone https://github.com/FFmpeg/nv-codec-headers.git \
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 RUN git clone https://github.com/styler00dollar/FFmpeg-GPU-Demo --recursive && \
-    cd FFmpeg-GPU-Demo/ffmpeg-gpu && sh config_ffmpeg_libtorch.sh && make -j16 && make install
+    cd FFmpeg-GPU-Demo/ffmpeg-gpu && sh config_ffmpeg_libtorch.sh && make -j16 && make install && \
+    cd .. && cd .. && rm -rf FFmpeg-GPU-Demo
